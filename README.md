@@ -7,3 +7,4 @@ Scripts that run on the Prairie Sky Weather Network's server.
 - `stations.csv`: every station, who runs it, and where it is.
 
 Maintained by Xuanyu Zhang.
+Questions go to the coordinator.

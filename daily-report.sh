@@ -12,10 +12,10 @@ logs=~/psk/logs
 day=$1
 
 echo "Prairie Sky daily report for $day"
-for f in $logs/*-$day.csv; do
-    id=$(basename $f -$day.csv)
-    high=$(tail -n +2 $f | cut -d, -f2 | sort -n | tail -1)
-    low=$(tail -n +2 $f | cut -d, -f2 | sort -n | head -1)
-    rain=$(tail -n +2 $f | cut -d, -f5 | paste -sd+ - | bc)
+for f in "$logs"/*-"$day".csv; do
+    id=$(basename "$f" "-$day.csv")
+    high=$(tail -n +2 "$f" | cut -d, -f2 | sort -n | tail -1)
+    low=$(tail -n +2 "$f" | cut -d, -f2 | sort -n | head -1)
+    rain=$(tail -n +2 "$f" | cut -d, -f5 | paste -sd+ - | bc)
     echo "$id: high $high, low $low, rain $rain"
 done
