@@ -8,3 +8,4 @@ Scripts that run on the Prairie Sky Weather Network's server.
 
 Maintained by Xuanyu Zhang.
 Questions go to the coordinator.
+This is a new line.
