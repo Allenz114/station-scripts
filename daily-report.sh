@@ -19,3 +19,4 @@ for f in "$logs"/*-"$day".csv; do
     rain=$(tail -n +2 "$f" | cut -d, -f5 | paste -sd+ - | bc)
     echo "$id: high ${high}C, low ${low}C, rain ${rain}mm"
 done
+echo "Report made $(date +%F) by $USER"
