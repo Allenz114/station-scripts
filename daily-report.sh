@@ -17,5 +17,5 @@ for f in "$logs"/*-"$day".csv; do
     high=$(tail -n +2 "$f" | cut -d, -f2 | sort -n | tail -1)
     low=$(tail -n +2 "$f" | cut -d, -f2 | sort -n | head -1)
     rain=$(tail -n +2 "$f" | cut -d, -f5 | paste -sd+ - | bc)
-    echo "$id: high $high, low $low, rain $rain"
+    echo "$id: high ${high}C, low ${low}C, rain ${rain}mm"
 done
